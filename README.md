@@ -53,11 +53,11 @@ DeepFTSG-2 results on CDnet-2014, SBI-2015, and LASIESTA datasets, where SBI-201
 <i>click to see the full video demo</i>
 
 
-# How to use Motion-SE-MiT-Net
+# How to use DeepFTSG
 
 **src** folder contains all scripts used to train models, extract masks from trained models, and post-processing the output results to get labeled masks.
 
-**weights** folder contains pre-trained weights of the Motion-SE-MiT-Net, if you want to use pre-trained weights, put them inside **src/weights/** folder.
+**weights** folder contains pre-trained weights of the DeepFTSG models, if you want to use pre-trained weights, put them inside **src/weights/** folder.
 
 
 ## Project Collaborators and Contact
