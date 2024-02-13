@@ -1,13 +1,15 @@
 # DeepFTSG
 The official implementation of the IJCV 2023 journal paper [**DeepFTSG: Multi-stream Asymmetric USE-Net Trellis Encoders with Shared Decoder Feature Fusion Architecture for Video Motion Segmentation**](https://link.springer.com/article/10.1007/s11263-023-01910-x)
 
+</br>
 
 ## News
 
-**[November 30, 2023]** 
+**[February 13, 2024]** 
 
-- :fire::fire::fire:  **The src code and weight will be uploaded soon** 
+- :fire::fire::fire:  **The src code and weights are uploaded. Instructions on how to train and inference will be added soon.** 
 
+</br>
 
 ## DeepFTSG: Multi-Stream Asymmetric USE-Net Trellis Encoders With Shared Decoder Feature Fusion Architecture for Video Motion Segmentation
 Discriminating salient moving objects against complex, cluttered backgrounds, with occlusions and challenging environmental conditions like weather and illumination, is essential for stateful scene perception in autonomous systems. We propose a novel deep architecture, named DeepFTSG, for robust moving object detection that incorporates single and multi-stream multi-channel USE-Net trellis asymmetric encoders extending U-Net with squeeze and excitation (SE) blocks and a single shared decoder network for fusing multiple motion and appearance cues. DeepFTSG is a deep learning based approach that builds upon our previous hand-engineered flux tensor split Gaussian (FTSG) change detection video analysis algorithm which won the CDNet CVPR Change Detection Workshop challenge competition. DeepFTSG generalizes much better than top-performing motion detection deep networks, such as the scene-dependent ensemble-based FgSegNet v2, while using an order of magnitude fewer weights. Short-term motion and longer-term change cues are estimated using general-purpose unsupervised methods – flux tensor and multi-modal background subtraction, respectively. DeepFTSG was evaluated using the CDnet-2014 change detection challenge dataset, the largest change detection video sequence benchmark with 12.3 billion labeled pixels, and had an overall F-measure of 97%. We also evaluated the cross-dataset generalization capability of DeepFTSG trained solely on CDnet-2014 short video segments and then evaluated on unseen SBI- 2015, LASIESTA and LaSOT benchmark videos. On the unseen SBI-2015 dataset, DeepFTSG had an F-measure accuracy of 87%, more than 30% higher compared to the top-performing deep network FgSegNet v2 and outperforms the recently proposed KimHa method by 17%. On the unseen LASIESTA, DeepFTSG had an F-measure of 88% and outperformed the best recent deep learning method BSUV-Net2.0 by 3%. On the unseen LaSOT with axis-aligned bounding box ground-truth, network segmentation masks were converted to bounding boxes for evaluation, DeepFTSG had an F-Measure of 55%, outperforming KimHa method by 14% and FgSegNet v2 by almost 1.5%. When a customized single DeepFTSG model is trained in a scene-dependent manner for comparison with state-of-the-art approaches, then DeepFTSG performs significantly better, reaching an F-Measure of 97% on SBI-2015 (+10%) and 99% on LASIESTA (+11%).
@@ -52,6 +54,7 @@ DeepFTSG-2 results on CDnet-2014, SBI-2015, and LASIESTA datasets, where SBI-201
 
 <i>click to see the full video demo</i>
 
+</br>
 
 # How to use DeepFTSG
 
@@ -59,6 +62,7 @@ DeepFTSG-2 results on CDnet-2014, SBI-2015, and LASIESTA datasets, where SBI-201
 
 **weights** folder contains pre-trained weights of the DeepFTSG models, if you want to use pre-trained weights, put them inside **src/weights/** folder.
 
+</br>
 
 ## Project Collaborators and Contact
 
@@ -84,6 +88,7 @@ University of Missouri-Columbia
 Columbia, MO 65211  
 palaniappank@missouri.edu
 
+</br>
 
 ## ✏️ Citation
 
@@ -107,4 +112,24 @@ If you think this project is helpful, please feel free to leave a star⭐️ and
   day={17},
   issn={1573-1405}
 }
+```
+
+## ✏️ Citation
+
+Site Change Detection (CDnet) papers if you use CDNet data in your project:
+
+```
+@inproceedings{CD2014,
+    author      = "Wang, Y. and Jodoin, P. M. and Porikli, F. and Konrad, J. and Benezeth, Y. and Ishwar, P.",
+    title       = "{CDnet-2014: An Expanded Change Detection Benchmark Dataset}",
+    booktitle   = "IEEE Conf. CVPR Workshops",
+    year        = "2014"
+}
+ 
+@inproceedings{CD2012,
+    author      = "Goyette, N. and Jodoin, P. M.  and Porikli, F. and Konrad, J. and Ishwar, P.",
+    title       = "{Changedetection.Net: A new change detection benchmark dataset}",
+    booktitle   = "IEEE Conf. CVPR Workshops",
+    year        = "2012"
+} 
 ```
