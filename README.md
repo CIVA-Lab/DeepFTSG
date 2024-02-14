@@ -71,9 +71,9 @@ Link to download [**DeepFTSG-2 weights**](https://meru.rnet.missouri.edu/~grzc7/
 
 # How to use DeepFTSG
 
-**src** folder contains all scripts used to train models, extract masks from trained models, and post-processing the output results to get labeled masks.
+```src``` folder contains all scripts used to train models, extract masks from trained models, and post-processing the output results to get labeled masks.
 
-**weights** folder contains pre-trained weights of the DeepFTSG models, if you want to use pre-trained weights, put them inside **src/models/** folder.
+```weights``` folder contains pre-trained weights of the DeepFTSG models, if you want to use pre-trained weights, put them inside ```src/models``` folder.
 
 There are three parts for this software in ```src``` folder, you can skip Part 1 (Train Models) if you are planning to use pre-trained models.
 
@@ -93,9 +93,9 @@ In every parts, there are readme file that describes the needed steps. The descr
 
 **To train DeepFTSG-1 or DeepFTSG-2**
 
-1. Put your data used to train the network in a folder called ```dataset/train/``` folder. Initial 50 images are given from Baseline/Highway of CDnet-2014 dataset as an example. Please cite CDnet papers if you use Baseline/Highway in your work.
+1. Put your data used to train the network in a folder called ```dataset/train/``` folder. Baseline/Highway is given from CDnet-2014 dataset as example. Please cite CDnet papers if you use Baseline/Highway in your work.
 
-2. Background Subtraction (BGS) and flux masks are optained using traditional methods. Initial 50 images are given from Baseline/Highway of CDnet-2014 dataset as an example. Please cite CDnet papers if you use Baseline/Highway in your work.
+2. Background Subtraction (BGS) and flux masks are optained using traditional methods. Baseline/Highway is given from CDnet-2014 dataset as example. Please cite CDnet papers if you use Baseline/Highway in your work.
 
 3. Change input and label paths and extensions accordingly in ```Train_DeepFTSG_1.py``` or ```Train_DeepFTSG_2.py```
 
@@ -109,7 +109,7 @@ In every parts, there are readme file that describes the needed steps. The descr
 
 2. Change dataset paths and extensions accordingly in ```Infer_DeepFTSG_1.py``` or ```Infer_DeepFTSG_2.py```
 
-3. Change video sequence paths accordingly in ```CD2014.txt```. Some examples of video sequence taken from CDNet 2014 are given inside  ```CD2014.txt```
+3. Change video sequence paths accordingly in ```CD2014.txt``` which is located inside ```files``` folder . Some examples of video sequence taken from CDNet 2014 are given inside  ```CD2014.txt```
 
 4. Run ```Infer_DeepFTSG_1.py``` or ```Infer_DeepFTSG_2.py```
 
