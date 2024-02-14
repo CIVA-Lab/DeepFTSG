@@ -5,9 +5,13 @@ The official implementation of the IJCV 2023 journal paper [**DeepFTSG: Multi-st
 
 ## News
 
+**[February 14, 2024]** 
+
+- :fire::fire::fire:  **Code for generating Background Subtraction (BGS) result using OpenCV library used in this work is available now! Dependencies to create the python environment will be added soon.** 
+
 **[February 13, 2024]** 
 
-- :fire::fire::fire:  **The src code and weights are uploaded. Instructions on how to train and inference will be added soon.** 
+- :fire::fire::fire:  **The src code and weights are uploaded.** 
 
 </br>
 
@@ -119,15 +123,60 @@ This script will extract masks using trained / pre-trained models of DeepFTSG fo
 
 **To get binary masks ofDeepFTSG-1 or DeepFTSG-2**
 
-1. Change ```orgImgFolder``` and ```maskFolder``` paths accordingly in ```threshold.m```. The example is given for CDnet dataset.
+1. Change ```networkName``` with the network name you want to apply threshold in ```threshold.m```.
 
-2. Change input image names and extension accordingly in ```threshold.m```
+2. Change ```orgImgFolder``` and ```maskFolder``` paths accordingly in ```threshold.m```. The example is given for CDnet dataset.
 
-3. Change the folder path of video sequences and maximum number of frames in that sequence accordingly in ```runThreshold.m```. The example is given for CDnet dataset.
+3. Change input image names and extension accordingly in ```threshold.m```
 
-4. Run ```runThreshold.m```
+4. Change the folder path of video sequences and maximum number of frames in that sequence accordingly in ```runThreshold.m```. The example is given for CDnet dataset.
+
+5. Run ```runThreshold.m```
 
 This script will resize and threshold extracted masks to generate binary masks and save the binary masks inside ```output_th``` folder.  
+
+</br>
+
+## Running OpenCV Background Subtraction (BGS):
+
+**To get BGS results for use in DeepFTSG-1 and DeepFTSG-2**
+
+1. Go to ```OpenCV_BGS``` folder.
+```
+cd OpenCV_BGS
+```
+
+2. Change the input/output paths and image file format in ```config.txt``` file accordingly.  
+
+3. Create a ```build``` folder:  
+```
+mkdir build
+```
+
+4. Enter the ```build``` folder:
+```
+cd build
+```
+
+5. Run ```cmake```:
+```
+cmake ..
+```
+
+6. Run ```make```:
+```
+make
+```
+
+7. Go to ```bin/linux``` folder:
+```
+cd ../bin/linux
+```
+
+8. Run ```BGSubOpenCV```:
+```
+./BGSubOpenCV
+```
 
 </br>
 
@@ -199,4 +248,29 @@ Site Change Detection (CDnet) papers if you use CDNet data in your project:
     booktitle   = "IEEE Conf. CVPR Workshops",
     year        = "2012"
 } 
+```
+
+## ✏️ Citation
+
+Site OpenCV background subraction papers if you use OpenCV_BGS code in your project:
+
+```
+@article{Zivkovic,
+    title       = "{Efficient adaptive density estimation per image pixel for the task of background subtraction}",
+    journal     = "Pattern Recognition Letters",
+    volume      = "27",
+    number      = "7",
+    pages       = "773 - 780",
+    year        = "2006",
+    author      = "Zivkovic, Z. and van der Heijden, F."
+}
+
+@inproceedings{Zivkovic2,
+  author        = "Zivkovic, Z.",
+  booktitle     = "Int. Conf. Pattern Recognition", 
+  title         = "{Improved adaptive Gaussian mixture model for background subtraction}", 
+  year          = "2004",
+  volume        = "2",
+  pages         = "28-31"
+}
 ```
