@@ -137,7 +137,7 @@ This script will resize and threshold extracted masks to generate binary masks a
 
 </br>
 
-## Running OpenCV Background Subtraction (BGS):
+## Running OpenCV Background Subtraction (BGS)
 
 **To get BGS results for use in DeepFTSG-1 and DeepFTSG-2**
 
@@ -177,6 +177,15 @@ cd ../bin/linux
 ```
 ./BGSubOpenCV
 ```
+
+</br>
+
+## Flux Tensor Mask
+
+The flux tensor part is not publicly available. However, it can be implemented by reading the following paper (flux tensor) in which it is explained in detail.
+
+ [**Flux Tensor Constrained Geodesic Active Contours with Sensor Fusion for Persistent Object Tracking**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605095/)
+
 
 </br>
 
@@ -227,6 +236,17 @@ If you think this project is helpful, please feel free to leave a star⭐️ and
   month={Oct},
   day={17},
   issn={1573-1405}
+}
+
+@article{bunyak2007flux,
+  title         = "{Flux tensor constrained geodesic active contours with sensor fusion for persistent object tracking}",
+  author        = "Bunyak, F. and Palaniappan, K. and Nath, S.K. and Seetharaman, G.",
+  journal       = "Journal of Multimedia",
+  volume        = "2",
+  number        = "4",
+  pages         = "20",
+  year          = "2007",
+  publisher     = "NIH Public Access"
 }
 ```
 

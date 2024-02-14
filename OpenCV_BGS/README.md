@@ -1,4 +1,4 @@
-# Running OpenCV Background Subtraction (BGS):
+# Running OpenCV Background Subtraction (BGS)
 
 **To get BGS results for use in DeepFTSG-1 and DeepFTSG-2**
 
