@@ -73,7 +73,47 @@ Link to download [**DeepFTSG-2 weights**](https://meru.rnet.missouri.edu/~grzc7/
 
 **src** folder contains all scripts used to train models, extract masks from trained models, and post-processing the output results to get labeled masks.
 
-**weights** folder contains pre-trained weights of the DeepFTSG models, if you want to use pre-trained weights, put them inside **src/weights/** folder.
+**weights** folder contains pre-trained weights of the DeepFTSG models, if you want to use pre-trained weights, put them inside **src/models/** folder.
+
+There are three parts for this software in ```src``` folder, you can skip Part 1 (Train Models) if you are planning to use pre-trained models.
+
+**Part 1 -->** Train Models: train both DeepFTSG models from scratch.
+
+**Part 2 -->** Extract Masks: use trained/pre-trained models to extract masks.
+
+**Part 3 -->** Threshold: use thresholding to convert output masks to binary masks.
+
+In every parts, there are readme file that describes the needed steps. The description is also placed here.
+
+**You need to use PyTorch to do Part 1 and Part2.**
+
+**You need to use MATLAB to do Part 3.**
+
+## Part 1 : Train Models
+
+**To train DeepFTSG-1 or DeepFTSG-2**
+
+1. Put your data used to train the network in a folder called ```dataset/train/``` folder. Initial 50 images are given from Baseline/Highway of CDnet-2014 dataset as an example. Please cite CDnet papers if you use Baseline/Highway in your work.
+
+2. Background Subtraction (BGS) and flux masks are optained using traditional methods. Initial 50 images are given from Baseline/Highway of CDnet-2014 dataset as an example. Please cite CDnet papers if you use Baseline/Highway in your work.
+
+3. Change input and label paths and extensions accordingly in ```Train_DeepFTSG_1.py``` or ```Train_DeepFTSG_2.py```
+
+4. Run ```Train_DeepFTSG_1.py``` or ```Train_DeepFTSG_2.py```
+
+## Part 2 : Extract Masks
+
+**To extract masks of DeepFTSG-1 or DeepFTSG-2**
+
+1. To extract masks using trained / pre-trained models of DeepFTSG create a new folder with dataset name inside ```dataset/test/``` folder and and put your data inside created folder. Baseline/Highway is given from CDnet-2014 dataset as example. Please cite CDnet papers if you use Baseline/Highway in your work.
+
+2. Change dataset paths and extensions accordingly in ```Infer_DeepFTSG_1.py``` or ```Infer_DeepFTSG_2.py```
+
+3. Change video sequence paths accordingly in ```CD2014.txt```. Some examples of video sequence taken from CDNet 2014 are given inside  ```CD2014.txt```
+
+4. Run ```Infer_DeepFTSG_1.py``` or ```Infer_DeepFTSG_2.py```
+
+This script will extract masks using trained / pre-trained models of DeepFTSG for the given dataset and save the result of output masks inside ```output``` folder.
 
 </br>
 
