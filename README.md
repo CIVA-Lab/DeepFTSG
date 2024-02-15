@@ -5,9 +5,13 @@ The official implementation of the IJCV 2023 journal paper [**DeepFTSG: Multi-st
 
 ## News
 
+**[February 15, 2024]** 
+
+- :fire::fire::fire:  **Dependencies to create the python environment are added.** 
+
 **[February 14, 2024]** 
 
-- :fire::fire::fire:  **Code for generating Background Subtraction (BGS) result using OpenCV library used in this work is available now! Dependencies to create the python environment will be added soon.** 
+- :fire::fire::fire:  **Code for generating Background Subtraction (BGS) result using OpenCV library used in this work is available now!** 
 
 **[February 13, 2024]** 
 
@@ -57,6 +61,21 @@ DeepFTSG-2 results on CDnet-2014, SBI-2015, and LASIESTA datasets, where SBI-201
 [![Demo DeepFTSG-2](/figures/DeepFTSG-2.gif)](https://youtu.be/kdDxea5xalU)
 
 <i>click to see the full video demo</i>
+
+</br>
+
+## Install The Environment
+Use the Anaconda
+
+```
+conda create -n deepftsg python=3.7
+
+conda activate deepftsg
+
+conda install pytorch==1.7.1 torchvision torchaudio cudatoolkit=11.0 -c pytorch
+
+pip install -r requirements.txt
+```
 
 </br>
 
